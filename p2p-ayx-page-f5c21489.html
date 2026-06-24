@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ayx · 用途识别与说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f5f7;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      color: #1f2a3f;
+    }
+
+    /* 深色头图 — 杂志感横幅 */
+    .hero {
+      background: linear-gradient(145deg, #0b1424 0%, #1b2a41 65%, #24344e 100%);
+      color: #dde4f0;
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: linear-gradient(to top, #f4f5f7, transparent);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 0.6rem;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .hero .sub {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      max-width: 700px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 1.2rem;
+    }
+
+    /* 浅色正文区 杂志卡片式 */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 2.2rem 2.5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eef0f4;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+    }
+
+    .card h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #18233a;
+      border-left: 5px solid #3579b0;
+      padding-left: 1rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .card p {
+      margin-bottom: 1.2rem;
+      color: #2c3a52;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .accent-link {
+      color: #1c6ea4;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .accent-link:hover {
+      color: #0b4b78;
+      border-bottom: 1px solid #0b4b78;
+    }
+
+    .highlight-box {
+      background: #e9eef7;
+      padding: 1.5rem 2rem;
+      border-radius: 20px;
+      margin-top: 0.8rem;
+      border-left: 4px solid #3579b0;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0.4rem;
+    }
+
+    /* 页尾 */
+    .footer-note {
+      background: #eef1f6;
+      border-radius: 40px 40px 0 0;
+      padding: 2.8rem 2rem 2.5rem;
+      text-align: center;
+      margin-top: 2.5rem;
+      border-top: 1px solid #dce1e9;
+      color: #36445d;
+    }
+
+    .footer-note p {
+      max-width: 700px;
+      margin: 0 auto 0.6rem;
+      font-size: 1.1rem;
+    }
+
+    .footer-note .small {
+      font-size: 0.95rem;
+      opacity: 0.6;
+      margin-top: 0.5rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 700px) {
+      .hero { padding: 3.5rem 1.5rem 3rem; }
+      .hero h1 { font-size: 2.2rem; }
+      .card { padding: 1.8rem 1.5rem; }
+      .card h2 { font-size: 1.4rem; }
+      .container { padding: 1.5rem 1rem 3rem; }
+      .highlight-box { padding: 1.2rem 1.2rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.8rem; }
+      .hero .sub { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图 banner -->
+  <header class="hero">
+    <h1>ayx · 方向与用途</h1>
+    <div class="sub">快速识别平台定位，理解它解决什么问题</div>
+  </header>
+
+  <!-- 浅色正文区：杂志三段自然介绍 -->
+  <main class="container">
+    <div class="card-grid">
+
+      <!-- 第一段：背景说明 —— 从用户识别需求切入 -->
+      <section class="card">
+        <h2>为何需要快速识别？</h2>
+        <p>当你第一次打开一个陌生站点，最直接的困惑往往是：这是做什么的？<strong>ayx</strong> 所指向的服务，核心面向对等互联与资源共享场景。无论你是想了解 P2P 技术应用，还是寻找文件交换、数据协作的轻量方案，这里的结构都围绕「节点之间的直接沟通」来设计。</p>
+        <p>平台名本身取自 peer-to-peer 与 exchange 的缩写融合，强调双方对等、去中心化流程。所有功能入口都以这一逻辑为底色。</p>
+      </section>
+
+      <!-- 第二段：三段自然介绍之一 —— 典型场景与体验 -->
+      <section class="card">
+        <h2>常见使用场景</h2>
+        <p>从实际用户反馈来看，访问 <a href="https://p2p-ayx.com.cn" class="accent-link">ayx</a> 的人群大多带着以下需求之一：</p>
+        <div class="highlight-box">
+          <p>• 寻找无需中心服务器中转的文件传输方式，降低延迟与依赖。</p>
+          <p>• 评估或测试基于 P2P 协议的数据同步工具。</p>
+          <p>• 获取开源社区中对等网络应用的相关文档与资源索引。</p>
+        </div>
+        <p>这些场景的共同点是：用户已具备一定技术背景，希望直接进入功能层，而非浏览营销内容。因此页面信息组织偏重清晰、可扫读的说明。</p>
+      </section>
+
+      <!-- 第三段：特点/FAQ摘要 —— 让介绍更具体 -->
+      <section class="card">
+        <h2>FAQ 摘要 · 平台特点</h2>
+        <p><strong>问：</strong> 这个平台适合初次接触 P2P 的人吗？<br>
+        <strong>答：</strong> 页面提供基础概念指引，但主要面向已了解对等网络、需要实践入口的用户。你可以把 <a href="https://p2p-ayx.com.cn" class="accent-link">ayx</a> 当作一个功能型出发点，而非教学站点。</p>
+        <p><strong>问：</strong> 是否强制注册或付费？<br>
+        <strong>答：</strong> 网站目前突出工具属性，大部分浏览与基础交互无需账户。部分高级功能可能需要身份验证，具体以实际页面标注为准。</p>
+        <p><strong>问：</strong> 数据安全方面如何？<br>
+        <strong>答：</strong> 平台采用端对端传输机制，不长期留存文件内容。建议用户在使用前阅读站点提供的简要隐私说明。</p>
+        <p style="margin-top: 1.2rem; font-size: 0.95rem; color: #4a5b79;">以上摘要基于当前页面结构整理，实际功能以在线版本为准。</p>
+      </section>
+
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-note">
+      <p>如果你正在寻找一个对等网络功能的直接入口，可以试试打开</p>
+      <p style="font-weight: 500; font-size: 1.3rem; margin: 0.6rem 0 0.2rem;">
+        <a href="https://p2p-ayx.com.cn" class="accent-link" style="font-size: 1.5rem;">ayx</a>
+      </p>
+      <p class="small">页面信息整理于近期版本 · 用途说明页</p>
+    </div>
+  </main>
+
+</body>
+</html>
